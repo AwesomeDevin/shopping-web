@@ -1,0 +1,127 @@
+.car .bar-header{background:url(../img/header-bg.png) repeat-x #efefef ;display: flex;flex-direction: row;align-items: center;justify-content: space-between;}
+.car .bar-header .icon{width: 0.2rem;height: 0.2rem;font-size: 0.22rem;}
+.car #select{width: 100%;height: 0.57rem;background: white;position: relative;top: 0rem;left: 0;
+	display: flex; }
+.car #select a span{color: white;font-size: 0.13rem;text-align: center;}
+.car #select a {display: flex;width: 25%;height: 100%;justify-content: center;flex-direction: column;align-content: center;background: black;}
+.car #select a i{display: block;width: 0.3rem;height: 0.3rem;margin: 0 auto;}
+.car #select a:nth-child(1) i {background: url(../img/jd-sprites.png) no-repeat -0.3rem -0.27rem;background-size: 2rem 2rem;}
+.car #select a:nth-child(2) i {background: url(../img/jd-sprites.png) no-repeat -0.6rem -0.27rem;background-size: 2rem 2rem;}
+.car #select a:nth-child(3) i {background: url(../img/jd-sprites.png) no-repeat -0.9rem -0.27rem;background-size: 2rem 2rem;}
+.car #select a:nth-child(4) i {background: url(../img/jd-sprites.png) no-repeat -1.2rem -0.27rem;background-size: 2rem 2rem;}
+
+.car #select a:nth-child(1),#select a:nth-child(4),#select a:nth-child(2){opacity: 0.7;}
+
+
+.car .tip p{margin:0;display: flex;justify-content: center;align-items: center;}
+.car .tip{width: 100%;height: 0.34rem;background: white;text-align: center;line-height: 0.34rem;font-size: 0.13rem;color: #686868;}
+.car .tip p:before{display: inline-block;content: '';width: 0.18rem;height: 0.18rem;background: url(../img/car_img/shop_sprite.png) no-repeat 0 -1.5rem;background-size:0.5rem 2rem;}
+
+.car .order{width: 96%;overflow: hidden;min-height: 1rem;background: white;margin:0.1rem auto;}
+.car .order .header{width: 100%;height: 0.44rem;}
+.car .order .header .item{border: 0;padding-left: 0.4rem;}
+.car .order .header .item .item-content {display: flex;align-items: center;}
+.car .order .header .item .item-content span{font-size: 0.14rem;}
+.car .order .header .item .item-content:after{content: '';display: block;width: 0.08rem;height: 0.14rem;background: url(../img/car_img/icon-left.png) no-repeat;background-size:cover;margin-left: 0.05rem;}
+.car .order .header .checkbox input:before, .checkbox-icon:before{display: table;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 28px;
+    background: #fff;
+    content: ' ';
+    -webkit-transition: background-color 20ms ease-in-out;
+    transition: background-color 20ms ease-in-out;}
+
+
+.car .order .header .checkbox input:after, .checkbox-icon:after{-webkit-transition: opacity .05s ease-in-out;
+    transition: opacity .05s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: table;
+    width: 0.15rem;
+    height: 0.06rem;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 0;}
+
+.car .order .header .checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{background: #f23030;
+    border-color:#f23030;}
+
+.car .order .header .checkbox input, .checkbox-icon{top: 0.04rem;}
+
+.car .order .header img{width: 0.16rem;height: 0.13rem;margin:0 0.05rem;}
+
+
+
+.car .order .content{width: 100%;overflow: hidden;padding:0.1rem 0;}
+.car .order .content .checkbox input:before, .checkbox-icon:before{display: table;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 28px;
+    background: #fff;
+    content: ' ';
+    -webkit-transition: background-color 20ms ease-in-out;
+    transition: background-color 20ms ease-in-out;}
+
+
+.car .order .content .checkbox input:after, .checkbox-icon:after{-webkit-transition: opacity .05s ease-in-out;
+    transition: opacity .05s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: table;
+    width: 0.15rem;
+    height: 0.06rem;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 0;}
+
+.car .order .content .checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{background: #f23030;
+    border-color:#f23030;}
+.car .order .content img{height: 0.88rem;box-shadow: 0px 0px 5px #e3e5e9;margin-left: 0.25rem;float: left;}
+.car .order .content .item .item-content {    overflow: initial;display: flex;}
+.car .order .content .item{padding-left:0.5rem;border:0;width: 0.15rem;position: absolute;background:none;top: 0.37rem;}
+.car .order .content  .box{width: 1.63rem;height:0.88rem;float: right;margin-right: 0.1rem;}
+.car .order .content  .box p{font-size: 0.13rem;margin:0;overflow: hidden;float: left;}
+.car .order .content  .box p:nth-child(2){width: 100%;}
+.car .order .content  .box p span{font-size: 0.11rem;color: #81838e;overflow: hidden;}
+.car .order .content  .box p span:nth-child(2){float: right;width: 0.82rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.car .order .content .item-checkbox .checkbox{width: 0.28rem;height: 0.28rem;}
+.car .order .content  .box p span.price{color: #f23030;font-size: 0.13rem;font-family: '微软雅黑';}
+.car .order .content  .box p span.price span{color: #f23030;font-size: 0.15rem;}
+.car .order .content  .box .btn{float: right;height: 0.24rem;display: flex;align-items: center;justify-content: center;}
+.car .order .content  .box .btn input{width: 0.34rem;height: 0.24rem;border:0;box-shadow: 0 0 1px #cbcbcb;text-align: center;}
+.car .order .content  .box .btn button{display: block;width: 0.25rem;height: 0.24rem;box-shadow: 0 0 1px #cbcbcb;border: none;}
+.car .order .content  .box .btn button:nth-child(1){background: url(../img/car_img/shop_sprite.png) no-repeat 0.06rem -1.13rem;background-size:0.5rem 2rem;}
+.car .order .content  .box .btn button:nth-child(3){background: url(../img/car_img/shop_sprite.png) no-repeat 0.07rem -0.93rem;background-size:0.5rem 2rem;}
+.car .has-header{min-height: 5.68rem;}
+.car .has-header .scroll{min-height: 5.68rem;padding-bottom: 0.5rem;}
+
+
+
+.car .submit_bar {width: 100%;height: 0.5rem;position: fixed;bottom: 0;left: 0;background: rgba(255, 255, 255,1.0);display: flex;justify-content:space-between; }
+.car .order .content .delete{font-size: 0.13rem;float: right;border-left: 1px solid #cbcbcb;height: 0.13rem;line-height: 0.13rem;padding-left: 0.05rem;margin:0.05rem 0.1rem 0 0;}
+
+
+.total_selected {height: 100%;width: 0.66rem;border: 0;}
+.car .submit_bar div{width: 2.2rem;height: 100%;padding:0.02rem 0;text-align:center;}
+.car .submit_bar button{width: 0.98rem !important;text-align: center;line-height: 0.5rem;color: white;font-weight: bold;border: none;background: #f23030;font-size: 0.16rem; }
+.car .submit_bar div p{margin:0;}
+
+.car .submit_bar .total_selected .checkbox input,.car .submit_bar .total_selected .checkbox-icon{top:0.1rem;left: 0.1rem;}
+.car .submit_bar .total_selected div{width: 0.28rem;height: 0.2rem; }
+.car .submit_bar .total_selected div span{width: 0.28rem;height: 0.2rem;font-size: 0.12rem;font-weight: bold;position: absolute;left: 0.45rem;}
+.checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{background:#f23030;border-color:#f23030; }

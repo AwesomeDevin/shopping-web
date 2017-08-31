@@ -1,0 +1,280 @@
+<link rel="stylesheet" type="text/css" href="css/detail.css">
+<ion-view style="background:#ccc;">
+
+
+	<ion-header-bar>
+		<i  style="width: 0.235rem;height: 0.25rem;text-align: center;font-size:0.24rem;" class="icon ion-chevron-left" onclick="javascript:window.history.back()"></i>
+		<p class="detail_tab">
+
+		<a class="a_toshop" ng-click="to_shophome()" ng-class="{'active':contentbox_movenum1}" href="javascript:;">商品</a>
+		<a class="a_todetail" ng-click="to_shopdetail()" ng-class="{'active':contentbox_movenum2}" href="javascript:;">详情</a>
+		<a class="a_tocomment" ng-click="to_shopcomment()" ng-class="{'active':contentbox_movenum3}" href="javascript:;">评价</a>
+
+		</p>
+		<i ng-click="select_top()" style="width: 0.235rem;height: 0.25rem;" class="icon ion-ios-paper-outline" ></i>
+	</ion-header-bar>
+	<div id="select" ng-if="selectshow">
+		<a href="#/home"><i></i><span>首页</span></a>
+		<a ui-sref="main.fl"><i></i><span>商品列表</span></a>
+		<a href="#/car"><i></i><span>购物车</span></a>
+		<a href="#/user"><i></i><span>我的京东</span></a>
+	</div>
+	
+	<ion-content class="detail_content "  has-bouncing="false" ng-class="{'shophome':contentbox_movenum1,'shopdetail':contentbox_movenum2,'shopcomment':contentbox_movenum3,'go_list':selectshow}"  ">
+		<div id="detail_left" class="detail_left" style="width:3.2rem;overflow:hidden;float:left;">
+			<ion-slide-box style="margin-bottom:1px;">
+			  <ion-slide>
+			    <div class="box"><img class="shop" src="//m.360buyimg.com/n12/s640x640_jfs/t3217/349/3162726040/69478/2e153a70/57ecf5c6Nbc61da1c.jpg!q70.jpg" onerror="javascript:this.src='img/220936.gif'" alt="加载中..."/></div>
+			  </ion-slide>
+			  <ion-slide>
+			    <div class="box"><img class="shop" src="//m.360buyimg.com/n12/s640x640_jfs/t3199/153/3171842810/82448/4e9ce03b/57ecf5c7N24927e7a.jpg!q70.jpg" onerror="javascript:this.src='img/220936.gif'" alt="加载中..."/></div>
+			  </ion-slide>
+			  <ion-slide on-slide-changed="slideHasChanged(index)">
+			    <div class="box"><img class="shop" src="//m.360buyimg.com/n12/jfs/t3178/265/3761537881/240933/2cf7471b/57f856f9N9402fe4e.jpg!q70.jpg" onerror="javascript:this.src='img/220936.gif'" alt="加载中..."/></div>
+			  </ion-slide>
+			  
+			</ion-slide-box>
+			<div class="jiesao">
+				<h4 class="shops_title">{{shops_title}}</h4>
+				<p>笔记本电脑酷睿 i5-5200U 橙色 i5-5200 4G 500+8G固态 2G独显</p>  
+				<b class="shops_price">￥<span>{{shops_price}}</span></b>
+				<p class="tuijian">推荐：触控时尚轻薄本 下单即送YOGA专用包</p>	
+			</div>
+	    	<!-- 商品类型 -->
+	    	
+			<div class="goods_type">
+				
+					<div class="box_left"><span>已选</span></div>
+					<div ng-click="select_type()" class="box_right">
+						<p>{{shop_color}} {{shop_version}}<span>{{shop_num}}件</span></p>
+						<p><span>可选延保</span></p>
+					</div>
+				
+			</div>
+
+			<!-- 买家地址 -->
+			<div class="goods_address">
+				<div class="box1">
+					<div class="box1_left left"><span>送至</span></div>
+					<div class="box1_right right">
+						<p style="margin:0;margin-right: 0.2rem;float:left;">辽宁 丹东市 东港市 城区</p>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="box2_left left"><span>运费</span></div>
+					<div class="box2_right right">
+						<p>免运费</p>
+					</div>
+				</div>
+				<div class="box3">
+					<div class="box3_left left"><span>服务</span></div>
+					<div class="box3_right right">
+						<p>由联想众信合一专卖店从北京发货并提供售后服务</p>
+					</div>
+				</div>
+				<div class="box4">
+					<div class="box4_left left"><span>提示</span></div>
+					<div class="box4_right right">
+						<p style="color: #6277ac;">支持7天无理由退货</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 商品店铺 -->
+			<div class="good_shop">
+				<div class="shop_floor floor_1">
+					<img src="img/shop_logo.jpg"/>
+					<div class="txt">
+						<h5>{{store_name}}<span>9.5</span></h5>
+						<p>{{store_lastname}}</p>
+					</div>
+				</div>
+				<div class="shop_floor floor_2">
+					<p>商品<span>9.6</span></p>
+					<p>服务<span>9.5</span></p>
+					<p>物流<span>9.6</span></p>
+
+				</div>
+				<div class="shop_floor floor_3">
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>598</p>
+							<p>关注人数</p>
+						</div>
+					</div>
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>154</p>
+							<p>全部商品</p>
+						</div>
+					</div>
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>7</p>
+							<p>店铺动态</p>
+						</div>
+					</div>
+				</div>
+				<div class="shop_floor floor_4">
+					<div class="connection_sell">
+						<p>
+							联系卖家
+						</p>
+					</div>
+					<div class="go_shop">
+						<p>
+							进入店铺
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			
+		</div>
+
+
+		<div class="detail_center" style="width:3.2rem;overflow:hidden;float:left;background:white;">
+			<ul>
+				<li ng-class="{'active':introshow1}" ng-click="show_introduce1()">商品介绍</li>
+				<li ng-class="{'active':introshow2}" ng-click="show_introduce2()">规格参数</li>
+				<li ng-class="{'active':introshow3}" ng-click="show_introduce3()">包装售后</li>
+			</ul>
+
+			<div class="shop_introduce1" ng-if="introshow1">
+				<img src="img/intro1.jpg" alt="正在加载中..."/>
+				<img src="img/intro2.jpg" alt="正在加载中...">
+				<img src="img/intro3.jpg" alt="正在加载中...">
+				<img src="img/intro4.jpg" alt="正在加载中...">
+				<img src="img/intro5.jpg" alt="正在加载中...">
+				<img src="img/intro6.jpg" alt="正在加载中...">
+				<img src="img/intro7.jpg" alt="正在加载中...">
+				<img src="img/intro8.jpg" alt="正在加载中...">
+				<img src="img/intro9.jpg" alt="正在加载中...">
+				<img src="img/intro10.jpg" alt="正在加载中...">
+			</div>
+
+			<div class="shop_introduce2" ng-if="introshow2">
+				<table cellpadding="0" cellspacing="1" width="100%" border="1" class="Ptable"><tbody><tr><th class="tdTitle" colspan="2">主体</th></tr><tr></tr><tr><td class="tdTitle">系列</td><td>Y系列</td></tr><tr><td class="tdTitle">颜色</td><td>其他</td></tr><tr><td class="tdTitle">平台</td><td>Intel</td></tr><tr><th class="tdTitle" colspan="2">处理器</th></tr><tr></tr><tr><td class="tdTitle">CPU型号</td><td>i5-5200U</td></tr><tr><td class="tdTitle">系统总线</td><td>其它</td></tr><tr><td class="tdTitle">二级缓存</td><td>其它</td></tr><tr><td class="tdTitle">三级缓存</td><td>其它</td></tr><tr><td class="tdTitle">内建GPU</td><td>其它</td></tr><tr><td class="tdTitle">核心</td><td>其它</td></tr><tr><th class="tdTitle" colspan="2">内存</th></tr><tr></tr><tr><td class="tdTitle">内存容量</td><td>4GB</td></tr><tr><td class="tdTitle">内存类型</td><td>DDR3 1600</td></tr><tr><td class="tdTitle">插槽数量</td><td>1 x SO-DIMM</td></tr><tr><td class="tdTitle">最大支持容量</td><td>其它</td></tr><tr><th class="tdTitle" colspan="2">硬盘</th></tr><tr></tr><tr><td class="tdTitle">转速</td><td>5400转/分钟</td></tr><tr><td class="tdTitle">接口类型</td><td>SATA 串行</td></tr><tr><td class="tdTitle">固态硬盘</td><td>其它</td></tr><tr><th class="tdTitle" colspan="2">显卡</th></tr><tr></tr><tr><td class="tdTitle">类型</td><td>独立显卡</td></tr><tr><td class="tdTitle">显示芯片</td><td>其它</td></tr><tr><td class="tdTitle">双显卡</td><td>支持</td></tr><tr><th class="tdTitle" colspan="2">光驱	</th></tr><tr></tr><tr><td class="tdTitle">光驱类型</td><td>无光驱</td></tr><tr><td class="tdTitle">界面</td><td>其它</td></tr><tr><th class="tdTitle" colspan="2">显示器</th></tr><tr></tr><tr><td class="tdTitle">屏幕规格</td><td>14.0英寸</td></tr><tr><td class="tdTitle">显示比例</td><td>宽屏16：9</td></tr><tr><td class="tdTitle">物理分辨率</td><td>1920×1080 </td></tr><tr><td class="tdTitle">屏幕类型</td><td>LED背光</td></tr><tr><th class="tdTitle" colspan="2">通信</th></tr><tr></tr><tr><td class="tdTitle">内置蓝牙</td><td>有</td></tr><tr><td class="tdTitle">局域网</td><td>10/100Mbps</td></tr><tr><td class="tdTitle">无线局域网</td><td>有</td></tr><tr><td class="tdTitle">红外</td><td>支持</td></tr><tr><td class="tdTitle">内置3G</td><td>无</td></tr><tr><td class="tdTitle">内置3G模块</td><td>无</td></tr><tr><th class="tdTitle" colspan="2">端口	</th></tr><tr></tr><tr><td class="tdTitle">USB2.0</td><td>1 个</td></tr><tr><td class="tdTitle">音频端口</td><td>1 x 麦克风接口; 2 x 音频接口</td></tr><tr><td class="tdTitle">显示端口</td><td>HDMI接口</td></tr><tr><td class="tdTitle">RJ45</td><td>其它</td></tr><tr><td class="tdTitle">USB3.0</td><td>2个</td></tr><tr><th class="tdTitle" colspan="2">音效系统	</th></tr><tr></tr><tr><td class="tdTitle">扬声器</td><td>内置扬声器</td></tr><tr><td class="tdTitle">杜比音效</td><td>支持</td></tr><tr><td class="tdTitle">内置麦克风</td><td>有</td></tr><tr><th class="tdTitle" colspan="2">输入设备	</th></tr><tr></tr><tr><td class="tdTitle">键盘</td><td>其它</td></tr><tr><td class="tdTitle">触摸板</td><td>有</td></tr><tr><td class="tdTitle">指点杆</td><td>无</td></tr><tr><td class="tdTitle">遥控器</td><td>无</td></tr><tr><th class="tdTitle" colspan="2">其它设备	</th></tr><tr></tr><tr><td class="tdTitle">网络摄像头</td><td>有</td></tr><tr><td class="tdTitle">摄像头像素</td><td>720P</td></tr><tr><td class="tdTitle">面部识别</td><td>支持</td></tr><tr><td class="tdTitle">指纹识别</td><td>无</td></tr><tr><td class="tdTitle">读卡器</td><td>其它</td></tr><tr><th class="tdTitle" colspan="2">电源	</th></tr><tr></tr><tr><td class="tdTitle">电池</td><td>内置锂离子电池</td></tr><tr><td class="tdTitle">续航时间</td><td>其它</td></tr><tr><td class="tdTitle">电源适配器</td><td>45W AC适配器</td></tr><tr><th class="tdTitle" colspan="2">机器规格	</th></tr><tr></tr><tr><td class="tdTitle">净重</td><td>1.5kg-2kg</td></tr></tbody></table>
+			</div>
+
+			<div class="shop_introduce3" ng-if="introshow3">
+				<p>笔记本电脑*1 电源适配器*1 说明书*1 </p>
+				<p>全国联保 官方售后服务热线：400-990-8888</p>
+
+				<p>价格说明</p>
+				<p>1、京东价：京东价为商品的销售价，是您最终决定是否购买商品的依据。</p>
+				<p>2、划线价：商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在京东平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。</p>
+				<p>3、折扣：如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。</p>
+				<p>4、异常问题：商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。</p>
+
+				<P>能效标识说明</P>
+				<p>根据国家相关能效标识法规和标准的要求，京东自营在售商品的能效标识图样，将会逐步替换为新版能源效率标识贴；受能效标识标准变化影响，部分产品的新版和旧版能效标识，在能效等级、测试值等方面会有差异，但产品实际性能完全一样，并不影响购买和使用，加贴新版或旧版能效标识的商品会随机发放，请您放心购买；如有疑问，请在购买前通过咚咚或来电咨询。</p>
+			</div>
+		</div>
+
+		<div class="detail_right" style="width:3.2rem;overflow:hidden;float:left;background:white;">
+			<ul>
+				<li ng-click="tocomment1()" ng-class="{true:'active'}[comment_hover==1]">
+					<p>全部评价</p>
+					<p class="num1">0</p>
+				</li>
+				<li ng-click="tocomment2()" ng-class="{true:'active'}[comment_hover==2]">
+					<p>好评</p>
+					<p class="num2">0</p>
+				</li>
+				<li ng-click="tocomment3()" ng-class="{true:'active'}[comment_hover==3]">
+					<p>中评</p>
+					<p class="num3">0</p>
+				</li>
+				<li ng-click="tocomment4()" ng-class="{true:'active'}[comment_hover==4]">
+					<p>差评</p>
+					<p class="num4">0</p>
+				</li>
+				<li ng-click="tocomment5()" ng-class="{true:'active'}[comment_hover==5]">
+					<p>有图</p>
+					<p class="num5">0</p>
+				</li>
+
+			</ul>
+		</div>
+			
+		<div style="height:0.5rem;width:100%;float:left;"></div>
+		
+	</ion-content>
+	<div class="menu_list">
+		<div class="left_menu">
+			<a href="javascript:;">卖家</a>
+			<a href="javascript:;">关注</a>
+			<a ui-sref="main.car">购物车</a>
+		</div>
+
+		<div class="right_menu">
+			<a ng-click="add_shopcar()" href="javascript:;">加入购物车</a>
+			<a href="javascript:;">立即购买</a>
+		</div>
+			
+	</div>
+
+
+
+	<!-- 选择购买商品类型 -->
+	<div class="mask_shopstype">
+		<div class="mask"></div>
+		<div class="mask_content">
+			<div class="content_top">
+				<img class="shop_img" src="img/type1.jpg">
+				<p>￥5199.00</p>
+				<i ng-click="close_typechoose()" class="close_typechoose"></i>
+			</div>
+			<div class="content_middle">
+				<div class="type_title" style="overflow:hidden;padding:0 0.1rem;">
+					<p style="color: #81838e;margin-right:0.1rem;">已选</p>
+					<p>{{shop_color}} {{shop_version}}<span>{{shop_num}}件</span></p>
+				</div>
+				<div class="type_color" style="overflow:hidden;padding:0 0.1rem;">
+					<p style="color: #81838e;margin-right:0.1rem;">颜色</p>
+					<div style="float:left;">
+						<a class="a1" ng-click="selectcolor1()" ng-model="shop_color1" ng-class="{true:'active'}[typecolor_hover==1]" href="javascript:;">橙色</a>
+						<a class="a2" ng-click="selectcolor2()" ng-model="shop_color2" ng-class="{true:'active'}[typecolor_hover==2]" href="javascript:;">银色</a>
+						<a class="a3" ng-click="selectcolor3()" ng-model="shop_color3" ng-class="{true:'active'}[typecolor_hover==3]" href="javascript:;">黑色</a>
+					</div>
+				</div>
+				<div class="type_version" style="overflow:hidden;padding:0 0.1rem;">
+					<p style="color: #81838e;margin-right:0.1rem;">版本</p>
+					<div style="float:left;">
+						<a class="a1" ng-click="selectversion1()" ng-model="shop_version1" ng-class="{true:'active'}[typeversion_hover==1]" href="javascript:;">I5-5200 4G 500+8G固态 2G独显</a>
+						<a class="a2" ng-click="selectversion2()" ng-model="shop_version2" ng-class="{true:'active'}[typeversion_hover==2]" href="javascript:;">I5-5200 4G 256G纯固态 2G独显</a>
+						<a class="a3" ng-click="selectversion3()" ng-model="shop_version3" ng-class="{true:'active'}[typeversion_hover==3]" href="javascript:;">七代 i5-7200U 4G 256G固态2G独显</a>
+					</div>
+				</div>
+				<div class="type_num" style="overflow:hidden;padding:0 0.1rem;">
+					<p style="color: #81838e;margin-right:0.1rem;">数量</p>
+					<div style="float:left;">
+						<i ng-click="reduce_num()" class="reduce_num"><span></span></i><input ng-model="shop_num" type="text" /><i ng-click="add_num()" class="add_num"><span></span></i>
+					</div>
+				</div>
+			</div>
+			<p style="color: #848689;font-size:0.13rem;line-height:0.13rem;margin-left:0.1rem;padding:0.1rem 0;">保障服务<span style="margin-left:10px;color:black;">保修三年</span></p>
+			<div class="content_bottom">
+				<div class="button-bar">
+					<a ng-click="add_shopcar()" style="background:#ffb03f;color: white;font-family: '宋体' !important;" class="button" href="javascript:;">加入购物车</a>
+					<a style="background:#f23030;color: white;font-family: '宋体' !important;" class="button" href="javascript:;">立即购买</a>
+				</div>
+			</div>
+			
+
+		</div>	
+	</div>
+
+
+
+
+
+
+
+
+	
+
+
+</ion-view>

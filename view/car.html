@@ -1,0 +1,50 @@
+<link rel="stylesheet" type="text/css" href="css/car.css"/>
+<ion-view class="car">
+	<ion-header-bar align-title="center">
+		<i class="icon ion-chevron-left"  onclick="javascript:window.history.back()"></i>
+		<h1 class="title" style="font-family: '黑体';">购物车</h1>
+		<i ng-click="decideselect()" class="icon ion-ios-paper-outline"></i>
+	</ion-header-bar>
+	<ion-content has-bouncing="false">
+		<div id="select" ng-if="showselect"  class="">
+			<a href="#/home"><i></i><span>首页</span></a>
+			<a ui-sref="main.fl"><i></i><span>商品列表</span></a>
+			<a href="#/car"><i></i><span>购物车</span></a>
+			<a href="#/user"><i></i><span>我的京东</span></a>
+		</div>
+		<div class="tip">
+			<p class="card">您正在安全购物环境中，请放心购物</p>
+		</div>
+ 		<p ng-if="!shoparr" class="card" style="line-height: 0.5rem;background: white;margin-top: 0.1rem;text-align: center;font-family:cursive;color: coral; ">购物车内没有东西哦，快去选购吧,亲。</p>
+		<div ng-if="!hideorder" ng-click="removeorder_copy($index)" class="order" ng-repeat="(key,items) in storearr">
+			<div class="header" style="line-height: 0.44rem;">
+				<img style="display: inline-block;" src="img/car_img/shop.png"/> {{items.storename}}
+			</div>
+			<div class="content" ng-repeat="item in items.shoplist">
+				
+				<img src="//img10.360buyimg.com/n7/s176x176_jfs/t3178/265/3761537881/240933/2cf7471b/57f856f9N9402fe4e.jpg!q70.jpg"/>
+				<div class="box">
+						<p>{{item.title}}</p>
+						<P><span>颜色:{{item.color}}</span><span>版本:{{item.version}}</span></P>
+						<p><span class="price">￥<span class="price_num">{{item.price*item.num}}</span></span></p>
+
+						<div class="btn"><button class="reduce"  ng-click="reducenum($index)" ></button><input class="num"  type="number" min="1" ng-model="item.num" /><button  class="add" ng-click="addnum($index)"></button></div>
+
+				</div>
+				<p class="delete" ng-click="removeorder($index)">删除</p>
+			</div>
+		</div>
+		<div style="width:100%;height:0.5rem;"></div>
+		
+
+
+	</ion-content>
+	<div class="submit_bar">
+		
+		<div>
+			<p style="font-size:0.14rem;font-weight:bold;white-space:nowrap;" class="total_one">合计:￥{{total_price.toFixed(2)}}</p>
+			<p style="font-size:0.1rem;white-space:nowrap;"><span class="total_two">总额:￥{{total_price.toFixed(2)}}</span><span class="reduce">立减:￥0.00</span></p>
+		</div>
+		<button ng-click="submit_price()">去结算<span class="pay">({{total_num}})</span></button>
+	</div>
+</ion-view>

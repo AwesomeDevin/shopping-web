@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="css/search.css">
+<ion-view class="search_page">
+	<ion-header-bar style="background:#f8f8f8;" align-title="center" class="bar-stable">
+	  <div class="buttons">
+	    <button class="button" onclick="javascript:window.history.back();" ><i class="icon ion-ios-close-empty"></i></button>
+	  </div>
+	  <input class="title search_ipt" ng-model="search_word"  type="txt" placeholder="搜索词">
+	  <div class="buttons">
+	    <button class="button" ng-click="startSearch()"><i class="icon ion-ios-search-strong"></i></button>
+	  </div>
+	</ion-header-bar>
+	<ion-content has-bouncing="false">
+		<div ng-if="boxShow" class="histort_world_list">
+			<p  style="padding:10px;margin:0;">最近搜索<i style="float: right;" class="icon ion-trash-a" ng-click="delete_history()"></i></p>
+			<span ui-sref="main.fl" ng-repeat="item in history_word_arr track by $index">
+				{{item}}
+			</span>
+		</div>
+	</ion-content>
+
+</ion-view>

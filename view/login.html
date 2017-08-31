@@ -1,0 +1,72 @@
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+
+
+<ion-view>
+
+	<ion-header-bar id="header" >
+	<h2 class="title" style="font-family:'黑体';left:0.32rem;text-align: center;line-height: 0.45rem; ">用户登录</h2>
+	<i  style="position: relative;z-index: 100;" class="icon ion-chevron-left headericon" ui-sref="main.home"></i>
+
+	</ion-header-bar>
+
+	<ion-content has-bouncing="false">
+		<div class="list">
+		  	<label class="item item-input input1">
+		    	<input  ng-focus="focus1()" ng-change="blur1(hh.input_value1)"  ng-model="hh.input_value1" type="text" placeholder="用户名/邮箱/已验证手机">
+		    	<label ng-if="txt1" ng-click="Clear1()" style="margin: 0;width: 0.22rem;height: 100%;position: relative;margin-right: 0.1rem;">
+		    		<i   class="clear"></i>
+		    	</label>
+		  	</label>
+		 	<label class="item item-input input2">
+		 	
+			    <input ng-if="!pw_flag" style="border: 0;" ng-focus="focus2()" ng-model="hh.input_value2"  ng-change="blur2(hh.input_value2)"  type="password" placeholder="请输入密码"/>
+			    <input ng-if="pw_flag" style="border: 0;" ng-focus="focus2()" ng-model="hh.input_value2"  ng-change="blur2(hh.input_value2)"  type="text" placeholder="请输入密码"/>
+			   	<label ng-if="txt2" ng-click="Clear2()" style="margin: 0;width: 0.25rem;height: 100%;position: relative;margin-right: 0.05rem;">
+			    	<i  class="clear"></i>
+				</label> 
+			   	<label class="toggle  toggle-assertive">
+
+			   		<input type="checkbox" ng-click="blur2(hh.input_value2)" ng-model='pw_flag' name="">
+			   		
+			   		<div class="track" style="line-height: 0.25rem;color: white">
+			   		abc
+				   		<div class="handle"></div>
+					
+				  	</div>
+					<span style="margin-left: -0.24rem;line-height: 0.25rem;color: #ccc;">---</span>
+
+			   	</label>
+		  	</label>
+		  	<label  class="item item-input input3">
+		    	<input id="code_char" ng-model="hh.input_value3" ng-focus="focus3()" ng-change="blur3(hh.input_value3)" type="text" placeholder="请输入验证码">
+		    	<label ng-if="txt3" ng-click="Clear3()" style="margin: 0;width: 0.67rem;height: 100%;position: relative;margin-right: 0.1rem; ">
+		    		<i  class="clear"></i>
+		    	</label>
+		    	<label style="width: 1rem;" ng-click="change_checknum()">
+		     	<p  class="check_num"><img   style="width: 80%;height: 100%;" src="checknum/code_char.php"/></p>
+		     	</label>
+		  	</label>
+
+		  	<label>
+		  		<button ng-click="startlogin()"  ng-disabled="disabled_ok" ng-class="{true:'isok'}[disabled_ok==false]"  class="button button-block list-inset btn-nopadding">登录</button>
+		  	</label>
+
+				
+			<ion-list class="miandenglu ">
+			  	<ion-checkbox  ng-checked="is_free_login" ng-click="dada(is_free_login)"  style="width: 2rem;background: #f3f5f7 !important;font-size: 0.1rem;float: left;border: 0;font-family: '黑体';">一个月内免登录</ion-checkbox>
+			</ion-list>
+
+			<div class="bar servers" >
+				<i class="icon ion-locked" ui-sref="main.find_pwd">找回密码</i>
+				<p class="icon ion-person-add" onclick="javascript:window.location.href='#/register'">快速注册</p>
+			</div>
+
+
+			<!-- <div class="bar " id="link">
+				<h3>其他方式登录</h3>
+				<a href="javascript:;"><i></i><p>QQ</p></a>
+				<a href="javascript:;"><i></i><p>微信</p></a>
+			</div> -->
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,363 @@
+<ion-view>
+	<header>
+		<div class="bc" style="opacity: {{Opacity}}"></div>
+		<!-- <i class="logo"></i> -->
+		<b style="color:white;">快乐购</b>
+		<div class="search" >
+			<i></i>
+			<input ng-focus="toSearch()" style="margin:0;width:1.5rem;" placeholder="搜索词" type="search"/>
+		</div>
+		<a ng-if="login_txt" class="txt" href="#/login">登录</a>
+		<a ng-if="login_logo" class="user" href="#/user"></a>
+	</header>
+	<ion-content class="budong" has-bouncing="false" on-scroll="scroll()">
+		<ion-slide-box class="banner"
+		does-continue="true"
+		auto-play="true" slide-interval="5000"
+		show-pager="false"
+		>
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner1.jpg"/>
+			</ion-slide>	
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner2.jpg"/>	
+			</ion-slide>	
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner3.jpg"/>	
+			</ion-slide>	
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner4.jpg"/>	
+			</ion-slide>	
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner5.jpg"/>
+			</ion-slide>	
+			<ion-slide>
+				<img ui-sref="main.fl" src="img/banner6.jpg"/>	
+			</ion-slide>	
+					
+		</ion-slide-box>
+		<!-- <div class="top-bc1">
+			<img src="img/top0.jpg">
+		</div>
+		<div class="top-bc2">
+			<img src="img/top1.jpg">
+		</div>
+		<div class="top-bc3">
+			<img src="img/top2.jpg">
+		</div> -->
+		
+		<div id="nav">
+			<div class="contain">
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/1.png"/><span>快乐购超市</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/2.png"/><span>全球购</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/3.png"/><span>服装城</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/4.png"/><span>快乐购生鲜</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/5.png"/><span>快乐购到家</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/6.png"/><span>充值中心</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/7.png"/><span>惠赚钱</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/8.png"/><span>领券</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/9.png"/><span>物流查询</span></a>
+				<a ui-sref="main.fl" href="javascript:;"><img src="img/10.png"/><span>我的关注</span></a>
+			</div>
+		</div>
+
+		<div class="jdkb">
+			<div class="box">
+				<!-- <img src="img/jdkb.png"/> -->
+				<b>快乐购快报</b>
+				<div class="news">
+					<ul id="news">
+						<li><a href="javascript:;"><span>热门</span>母婴返场狂欢购,满199减60。</a></li>
+						<li><a href="javascript:;"><span>推荐</span>小家电两件8.5折,家电狂欢不谢幕。</a></li>
+						<li><a href="javascript:;"><span>抢</span>华为Meta9现货开抢。</a></li>
+						<li><a href="javascript:;"><span>热门</span>母婴返场狂欢购,满199减60。</a></li>
+					</ul>
+				</div>
+				<span ui-sref="main.fl" class="more">更多</span>
+			</div>
+		</div>
+		
+		<div id="miaosha">
+			<div class="header">
+				<span class="icon-t"></span>
+				<h4>快乐购秒杀</h4>
+				<div class="timer">
+					<span class="hour">00</span>:
+					<span class="minute">00</span>:
+					<span class="second">00</span>
+				</div>
+				<button ui-sref="main.fl" class="button button-small button-clear button-light icon icon-right ion-ios-arrow-right">更多秒杀</button>
+			</div>
+
+			<ion-scroll direction="x" scrollbar-x="false">
+				<ul>
+					<li ui-sref="main.fl" ng-repeat="item in miaosha">
+						<dl>
+							<a ui-sref="main.detail" href="javascript:;"><img ng-src="{{item.img}}" alt="正在加载..." /></a>
+							<dt>￥{{item.price}}</dt>
+							<dd>￥{{item.market_price}}</dd>
+						</dl>
+					</li>
+					
+					
+					<a class="last-a" ui-sref="main.fl"><i></i><span>查看全部</span></a>
+					
+				</ul>
+
+			</ion-scroll>
+			<div class="hidefloor"></div>
+		</div>
+		<ion-list class="floor1" >
+				<ion-item class="big" >
+				<div ui-sref="main.fl" style="background:white;">
+					<h3>排行榜</h3>
+					<p>热卖爆款值得买</p>
+					<img src="//m.360buyimg.com/mobilecms/jfs/t3712/114/1473274379/14031/2b87ca4/5829258aN22eeeacb.jpg!q70.jpg"/>
+				</div>
+				<div ui-sref="main,fl" style="background:white;">
+					<h3>闪购</h3>
+					<p>美特斯邦威2折</p>
+					<img src="//m.360buyimg.com/mobilecms/jfs/t3571/342/1577214870/9962/acd05696/5829848dNca1fd2ba.jpg!q70.jpg"/>
+				</div>
+				</ion-item>
+				
+				
+
+				
+		</ion-list>
+
+		<div class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t2878/152/3484829401/8909/e1cf0ca/578de36bNae7bb54a.png!q70.jpg"/>
+			</div>
+					
+			<div ui-sref="main.fl" ng-class="{true:'big',false:'small'}[item.ig_isbig==1]" ng-repeat="item in shops[0]">
+				<h3>{{item.ig_title}}</h3>
+				<p>{{item.ig_subtitle}}</p>
+				<span ng-if="item.ig_cuxiao">{{item.ig_cuxiao}}</span>
+				<img ng-src="{{item.ig_img}}"/>
+			</div>
+			<!-- <div class="small">
+				<h3>爱宝宝</h3>
+				<p>两件8.5折</p>
+				<span>5折购</span>		
+				<img src="//m.360buyimg.com/mobilecms/jfs/t3667/15/431160879/22286/9fbe09b0/5809d10aNc04b86a7.png!q70.jpg"/>
+			</div> -->
+		
+		</div>
+
+		<div class="swiper-container" id="lunbo2">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="javascript:;"><img src="//img1.360buyimg.com/da/jfs/t3499/204/1507089364/90108/849426d0/58292f1eNdf542486.jpg"></a></li>
+				<li class="swiper-slide"><a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3325/219/1410071049/28200/d986fede/58297445N9932fa5a.jpg!q70.jpg"></a></li>
+				
+			
+			</ul>
+			<div class="swiper-pagination">
+			</div>
+		</div>
+
+
+		<div class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t2770/116/3443577674/8292/e6734ea8/578de5d6Nfa94e17d.png!q70.jpg"/>
+			</div>
+					
+			<div ui-sref="main.fl" ng-class="{true:'big',false:'small'}[item.ig_isbig==1]" ng-repeat="item in shops[1]">
+				<h3>{{item.ig_title}}</h3>
+				<p>{{item.ig_subtitle}}</p>
+				<span class="colorbc2" ng-if="item.ig_cuxiao">{{item.ig_cuxiao}}</span>
+				<img ng-src="{{item.ig_img}}"/>
+			</div>
+			
+		
+		</div>
+
+		<div class="swiper-container" id="lunbo3">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="javascript:;"><img src="//img1.360buyimg.com/da/jfs/t3772/210/1484008856/71307/a1798de9/582958bdN41add8a5.jpg"></a></li>
+				<li class="swiper-slide"><a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3703/246/1564021079/128971/60b02fc0/582ac8afNfcf382e1.jpg!q70.jpg"></a></li>
+				
+			
+			</ul>
+			<div class="swiper-pagination">
+			</div>
+		</div>
+
+
+		<div class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t3448/19/1182995391/8761/d9d50d92/582061e0N9fe4b7e2.png!q70.jpg"/>
+			</div>
+					
+			<div ui-sref="main.fl" ng-class="{true:'big',false:'small'}[item.ig_isbig==1]" ng-repeat="item in shops[2]">
+				<h3>{{item.ig_title}}</h3>
+				<p>{{item.ig_subtitle}}</p>
+				<span class="colorbc3" ng-if="item.ig_cuxiao">{{item.ig_cuxiao}}</span>
+				<img ng-src="{{item.ig_img}}"/>
+			</div>
+			
+		
+		</div>
+
+		<div class="swiper-container" id="lunbo4">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="javascript:;"><img src="//img1.360buyimg.com/da/jfs/t3769/142/1374306785/95561/33eb8a80/5823daaeN580078ab.jpg"></a></li>
+				<li class="swiper-slide"><a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3343/316/1579821556/112786/ae4d672b/582aad5cNd7a84a38.jpg!q70.jpg"></a></li>
+				
+			
+			</ul>
+			<div class="swiper-pagination">
+			</div>
+		</div>
+
+		<div class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t2677/290/3439129728/9956/4d607f09/578de9fcNb59b6153.png!q70.jpg"/>
+			</div>
+					
+			<div ui-sref="main.fl" ng-class="{true:'big',false:'small'}[item.ig_isbig==1]" ng-repeat="item in shops[3]">
+				<h3>{{item.ig_title}}</h3>
+				<p>{{item.ig_subtitle}}</p>
+				<span  ng-if="item.ig_cuxiao">{{item.ig_cuxiao}}</span>
+				<img ng-src="{{item.ig_img}}"/>
+			</div>
+			
+		
+		</div>
+
+
+
+
+		<div class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t3583/2/1539991167/4307/19445fcc/582abb60Nf0bc03f8.png!q70.jpg"/>
+			</div>
+					
+			<div style="height: 1.21rem;padding: 0;width: 50%;float: left;" >
+				
+				<img style="width: 100%;height: 1.21rem;" src="//m.360buyimg.com/mobilecms/jfs/t3802/229/1529063519/47949/31b453ad/582abceaN2262f3fe.jpg!q70.jpg" />
+			</div>
+			<div  style="height: 1.21rem;padding: 0;width: 50%;float: right;">
+				
+				<img style="width: 100%;height: 1.21rem;" src="//m.360buyimg.com/mobilecms/jfs/t3709/157/1537400732/32987/d93a7f74/582abea5Nd4710a5a.jpg!q70.jpg" />
+			</div>
+			
+		
+		</div>
+
+
+
+		<div style="margin-bottom: 0.05rem;" class="show" >
+			<div class="title">
+				<img src="//m.360buyimg.com/mobilecms/jfs/t3406/267/672119127/9315/9ebcc364/58108445N29f62e01.png!q70.jpg"/>
+			</div>
+					
+			<div ui-sref="main.fl" ng-class="{true:'big',false:'small'}[item.ig_isbig==1]" ng-repeat="item in shops[4]">
+				<h3>{{item.ig_title}}</h3>
+				<p>{{item.ig_subtitle}}</p>
+				<span ng-if="item.ig_cuxiao">{{item.ig_cuxiao}}</span>
+				<img ng-src="{{item.ig_img}}"/>
+			</div>
+			
+		
+		</div>
+
+<!-- 
+		<div class="floor2">
+			<a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3610/167/991180559/27126/f91cdb93/581af57fN2e28a012.jpg!q70.jpg"/></a>
+			<a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3418/155/1422909034/15079/ed3a7605/5825c113N8be88d2c.jpg!q70.jpg"/></a>
+			<a href="javascript:;"><img src="//m.360buyimg.com/mobilecms/jfs/t3796/235/919444473/45156/73edf04c/5818a8c8N42a550d9.jpg!q70.jpg"/></a>
+		</div>
+		<a class="floor2-down"  href="javascript:;"><img  src="//m.360buyimg.com/mobilecms/jfs/t3121/131/401832842/110566/4ea4f49e/57b532f6N325542c7.jpg!q70.jpg"/></a> -->
+
+		
+
+		<div class="more">
+			<div class="title">
+			<p><i></i> <span>为您推荐</span></p>
+			</div>
+			<section>
+				<dl ui-sref="main.fl" ng-class="{true:'right',false:'left'}[shop.id%2==0]" ng-repeat="shop in more">
+					<img ng-src="{{shop.url}}"/>
+					<dt>卡饰社（CarSetCity）雪尼尔长杆可伸缩洗车拖把洗车刷 汽车掸子扫擦车拖把洗车工具 CS-83021 绿色</dt>
+					<dd>￥<b>{{shop.price}}</b><a href="javascript:;">看相似</a></dd>
+
+				</dl>
+
+
+				
+
+				<ion-infinite-scroll ng-if="loadshow"  class="load" on-infinite="moreload()">
+					
+				</ion-infinite-scroll>
+
+			</section>
+			<div ng-if="!loadshow" class="loadtxt" ng-click="openload()" >
+					<p>点击继续加载</p>
+			</div>
+		</div>
+
+
+		<ion-list>
+			<ion-item>
+				<a ui-sref="main.login">登录</a>
+				<a ui-sref="main.register">注册</a>
+				<a href="javascript:;">反馈</a>
+				<a ng-click="totop()">回到顶部</a>
+				
+			</ion-item>
+			<ion-item>
+				<dl>
+					<dt></dt>
+					<dd>客户端</dd>
+				</dl>
+				<dl class="active">
+					<dt></dt>
+					<dd>触屏版</dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd>电脑版</dd>
+				</dl>
+			</ion-item>
+			<ion-item>Copyright © 2004-2016 快乐购</ion-item>
+
+		</ion-list>
+
+
+
+
+
+		
+
+		<div style="width: 100%;height: 0.44rem;">
+
+		</div>
+
+
+
+		
+	</ion-content>
+	<div class="footer">
+		<a class="bar-home"  >
+			
+		</a>
+		<a class="bar-fenlei" href="#/fl" >
+			
+		</a>
+		<!-- <a class="bar-fx" ui-sref='main.fl'>
+			
+		</a> -->
+		<a class="bar-car" ui-sref='main.car'>
+			
+		</a>
+		<a class="bar-user" ui-sref='main.user'>
+		
+		</a>
+
+	</div>
+
+
+	<img ng-click="totop()" ng-if="to_top" class="totop" src="img/totop.png"/>
+</ion-view>

@@ -1,0 +1,143 @@
+<link rel="stylesheet" type="text/css" href="css/user.css"/>
+<script type="text/javascript" src="node_modules/exif-js/exif.js"></script>
+<ion-view class="user">
+	<div class="showimg"  ng-class={'tolowfloor':!is_cut}>
+		<div >
+			<img src="" id="toshow_img">
+		</div>
+
+		<div class="btn-bar" >
+		<button class="back" ng-click="back()">返回</button>
+		<button class="ok" ng-click="ok()">确定</button></div>
+	</div>
+	<ion-header-bar align-title="center">
+		<i class="icon ion-chevron-left"  onclick="javascript:window.history.back()"></i>
+		<h1 class="title" style="font-family: '黑体';">我的师院快乐购</h1>
+		<i ng-click="decideselect()" class="icon ion-ios-paper-outline"></i>
+	</ion-header-bar>
+	<ion-content has-bouncing="false">
+		<div id="select" ng-if="showselect"  class="">
+			<a href="#/home"><i></i><span>首页</span></a>
+			<a href="#/fl"><i></i><span>商品列表</span></a>
+			<a href="#/car"><i></i><span>购物车</span></a>
+			<a href="#/user"><i></i><span>我的京东</span></a>
+		</div>
+		<div class="user_interface">
+			<div class="top">
+				<div class="left">
+					<input type="file"  accept="image" file-model="images" onchange="angular.element(this).scope().uploadImage(this.files)"  style="position: absolute;opacity: 0;width: 0.56rem;height: 0.56rem;" />
+					<img ng-src="{{headerImage}}"/>
+				</div>
+				<div class="center">
+					<p>{{login_username}}</p>
+				</div>
+				<div class="right">
+					<a href="javascript:;" ng-click="quit_admin()">退出登录</a>
+				</div>
+			</div>
+			<div class="bottom">
+				<a href="javascript:;">
+					<p>0</p>
+					<p>关注的商品</p>
+				</a>
+				<a href="javascript:;">
+					<p>0</p>
+					<p>关注的店铺</p>
+				</a>
+				<a href="javascript:;">
+					<p>0</p>
+					<p>浏览记录</p>
+				</a>
+			</div>
+		</div>
+
+		<ion-list>
+			<ion-item>
+
+				<p class="order">我的订单</p>
+
+				<span ui-sref="main.car">全部订单<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item class="order_choice">
+				<a href="javascript:;"><img src="img/user_img/ordeer1.png"/>代付款</a>
+				<a href="javascript:;"><img src="img/user_img/order2.png"/>代收款</a>
+				<a href="javascript:;"><img src="img/user_img/order3.png"/>退换/售后</a>
+			</ion-item>
+		</ion-list>
+
+		<ion-list>
+			<ion-item>
+				<p class="purse">我的钱包</p>
+
+				<span><i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+
+			<ion-item class="order_purse">
+				<a href="javascript:;">
+					<p>0.0</p>
+					<p>账户余额</p>
+				</a>
+				<a href="javascript:;">
+					<p>0</p>
+					<p>优惠券</p>
+				</a>
+				<a href="javascript:;">
+					<p>0</p>
+					<p>京豆</p>
+				</a>
+				<a href="javascript:;">
+					<p>0</p>
+					<p>京东卡/E卡</p>
+				</a>
+
+			</ion-item>
+		</ion-list>
+
+
+		<ion-list>
+			<ion-item>
+				<p class="baitiao">京东白条</p>
+				<span>白条还款、激活获礼包<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="guanjia">服务管家</p>
+				<span>返修/退换货、在线客服<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="vip">京东会员</p>
+				<span>会员俱乐部<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+		</ion-list>
+
+
+		<ion-list>
+			<ion-item>
+				<p class="huochepiao">京东火车票</p>
+				<span>来京东轻松抢票<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="qiangbao">1元抢宝</p>
+				<span>1元成就梦想<i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="fuka">京东福卡</p>
+				<span><i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="yuyue">我的预约</p>
+				<span><i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="bigouma">我的必购码</p>
+				<span><i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+			<ion-item>
+				<p class="tuijian">应用推荐</p>
+				<span><i class="icon ion-ios-arrow-right"></i></span>
+			</ion-item>
+		</ion-list>
+
+		
+	</ion-content>
+</ion-view>
+

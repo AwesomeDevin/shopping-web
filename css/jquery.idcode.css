@@ -18,7 +18,7 @@
 	font-family:"Courier New", Courier, monospace;
 	text-decoration:none;
 	font-weight:bold;
-	
+	border: none !important;
 }
 .ehong-idcode-val0{
 	border:solid 1px #A4CDED;	
@@ -40,7 +40,6 @@
 .ehong-idcode-val4{
 	border:solid 1px #6C9;	
 	background-color:#F1DEFF;
-	
 }
 .ehong-idcode-val5{
 	border:solid 1px #6C9;	

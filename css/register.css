@@ -1,0 +1,43 @@
+#header{height: 0.45rem;width: 100%;border-bottom: 1px solid #ccc;box-sizing: border-box;background: #f9f9f9;color: #616161;text-align: center;line-height: 0.44rem;font-size: 0.16rem;padding: 0 0.15rem;}
+#header i{display: block;float: left;width: 0.22rem;}
+.scroll-content{min-height: 5.26rem;background: #f3f5f7 !important;}
+input,a{font-family: "黑体";}
+
+.label1{position:relative;width: 2.9rem;height: 0.45rem;margin: 0 auto;padding-left: 0.1rem;border: 1px solid #ccc;background: white;margin-top: 0.15rem;display: flex;flex-direction: row;align-items: center;}
+.label1 input{width: 1.9rem;height: 100%;line-height: 100%;float: left;}
+.label1 img{float: left;margin-right: 0.1rem;}
+.label1 p{float: left;width: 0.77rem;height: 0.23rem;margin: 0;display: flex;justify-content: center;border-left: 1px solid #ccc;margin-left: 0.1rem;}
+.label1 i{display: block;width: 0.22rem;height: 0.22rem;background: url(../img/fl_img/iconBg.png) no-repeat;background-size: 0.22rem 2.5rem;position: absolute;right: 0.8rem;top: 50%;transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+
+.label2{float:left;position:relative;width: 1.5rem;height: 0.45rem;margin: 0 auto;padding-left: 0.1rem;border: 1px solid #ccc;background: white;margin-top: 0.15rem;display: flex;flex-direction: row;align-items: center;margin-left:0.15rem;}
+.label2 input{width:1.28rem !important;height: 100%;line-height: 100%;float: left;margin-left: 0 !important;margin-left: 0.1rem !important;padding-left: 0;}
+
+button.get_checknum{width: 1.3rem;height: 0.45rem;float: right;font-size: 0.14rem;text-align: center;line-height: 0.45rem;margin-top: 0.15rem;margin-right: 0.15rem;border: 1px solid #ccc;color: #666;font-family: "黑体";box-sizing: border-box;min-height: 0.43rem;}
+
+
+.content .scroll{overflow: hidden;}
+
+.label3{position:relative;width: 2.9rem;height: 0.45rem;margin: 0 auto;padding-left: 0.1rem;border: 1px solid #ccc;background: white;margin-top: 0.15rem;display: flex;flex-direction: row;align-items: center;}
+.label3 input{width: 2rem;height: 100%;line-height: 100%;float: left;}
+
+.label4{position:relative;width: 2.9rem;height: 0.45rem;margin: 0 auto;padding-left: 0.1rem;border: 1px solid #ccc;background: white;margin-top: 0.15rem;display: flex;flex-direction: row;align-items: center;justify-content: space-between;}
+.label4 input{width: 2rem;height: 100%;line-height: 100%;float: left;}
+
+
+.label2 i{display: block;width: 0.22rem;height: 0.22rem;background: url(../img/fl_img/iconBg.png) no-repeat;background-size: 0.22rem 2.5rem;position: absolute;right: 0.05rem;top: 50%;transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+.label3 i{display: block;width: 0.22rem;height: 0.22rem;background: url(../img/fl_img/iconBg.png) no-repeat;background-size: 0.22rem 2.5rem;position: absolute;right: 0.05rem;top: 50%;transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+.label4 i{display: block;width: 0.22rem;height: 0.22rem;background: url(../img/fl_img/iconBg.png) no-repeat;background-size: 0.22rem 2.5rem;position: absolute;left:71.5%;top: 50%;transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+.button-full>button.button, button.button-block, button.button-full, input.button.button-block {width: 90%;margin: 0 auto;}
+
+.btn_zhuce{margin-top: 0.4rem !important;color: #848689;background: #eee;font-family: "黑体";border: 0;}
+
+.xieyi{font-size: 0.12rem;font-family: "黑体";color: #848689;text-align: center;margin-top: 0.4rem;}
+
+.xieyi a{color: #f23030;}
+
+
+button.btn_zhuce.btn_active{background:  #f23030 !important;color: white;}

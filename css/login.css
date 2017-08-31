@@ -1,0 +1,40 @@
+#header{height: 0.45rem;width: 100%;border-bottom: 1px solid #ccc;box-sizing: border-box;background: #f9f9f9;color: #616161;text-align: center;line-height: 0.44rem;font-size: 0.16rem;padding: 0 0.15rem;}
+#header i{display: block;float: left;width: 0.22rem;}
+.scroll-content{min-height: 5.26rem;background: #f3f5f7 !important;}
+
+
+
+.input2 input{border: 0 !important;}
+.scroll-content input{width: 2.9rem;height: 0.43rem;margin-left: 0.1rem;font-family: "黑体";border: 0;}
+.scroll-content label{width:2.9rem;height: 0.43rem !important;margin: 0 auto;margin-top: 0.15rem;background: white !important;position: relative;}
+.scroll-content .list label:nth-child(2) input{width: 2.9rem;padding-right: 0;}
+.scroll-content .toggle{margin: 0;width: 0.52rem;margin-right: 0.1rem;}
+.scroll-content .list label:nth-child(3) input{width: 2.9rem;padding-right: 0;}
+.scroll-content .list .check_num{width: 1rem;height: 0.23rem;border-left: 1px solid #eee;position: relative;padding:0 0.1rem;z-index: 100;}
+.btn-nopadding{padding: 0;background: #eee;color: #848689;width: 2.95rem !important;margin: 0 auto;margin-top: 0.5rem !important;font-family: "黑体";}
+.miandenglu .checkbox input:before, .checkbox-icon:before{width: 0.22rem;height: 0.22rem;}
+.miandenglu .checkbox input:after, .checkbox-icon:after{top: 23%;left: 10%;}
+.miandenglu .list{height: 0.58rem;}
+.checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{background: red;outline: none;border: none;}
+.check_num img{position: absolute;left:50%;top: 50%;transform: translate(-50% ,-50%);margin: 0 auto;-webkit-transform: translate(-50% ,-50%);-o-transform: translate(-50% ,-50%);-moz-transform: translate(-50% ,-50%);}
+.servers {background: none;display: flex;justify-content: space-between;}
+.servers i{float: left;display: inline-block;font-family: '黑体';color: #666;margin-left: 0.1rem;}
+.servers p{float: right;display: inline-block;font-family: '黑体';color: #666;margin-right: 0.1rem;}
+.list .bar{position: relative;background: none;display: flex;flex-direction: row;justify-content: space-around;}
+.list #link{margin:0 auto;margin-top: 0.47rem;border-top: 1px solid #ccc;padding: 0;width: 90%;padding-top: 0.21rem;height: auto;}
+.list #link h3{font-family: '黑体';color:#616161;font-weight: 500;position: absolute;left: 50%;top: -0.13rem;font-size: 0.17rem;width: auto;height: auto;background: #f3f5f7 !important;padding: 0.05rem;transform: translateX(-50%);-webkit-transform: translateX(-50%);-o-transform: translateX(-50%);-moz-transform: translateX(-50%);display: -webkit-box;}
+.list .bar a{color: #666;font-family: '黑体';display: block;text-align: center;}
+.list .bar a:nth-of-type(1) i{display: block;margin:0 auto;background: url(../img/fl_img/iconBg.png) no-repeat 0 -1.29rem;background-size: 0.22rem 2.5rem;}
+.list .bar a i{display: block;width: 0.22rem;height: 0.22rem;}
+.list .bar a:nth-child(3) i{display: block;margin:0 auto;background: url(../img/fl_img/iconBg.png) no-repeat 0 -1.55rem;background-size: 0.22rem 2.5rem;}
+
+.list label i.clear{display: block;width: 0.22rem;height: 0.22rem;background: url(../img/fl_img/iconBg.png) no-repeat ;background-size: 0.22rem 2.5rem;position: absolute;z-index: 100;top: 0;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+
+.list .input1 i{right: 0rem;}
+.list .input2 i{}
+.list .input3 i{right: 0rem;}
+
+.btn-nopadding.isok{background:#f23030;color: white;}
+
+
+input,button,a{outline: none;}

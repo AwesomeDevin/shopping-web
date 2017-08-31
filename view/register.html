@@ -1,0 +1,65 @@
+<link rel="stylesheet" type="text/css" href="css/register.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.idcode.css"/>
+<!-- <script type="text/javascript" src="js/jquery.idcode.js"/></script> -->
+
+<ion-view>
+	<ion-header-bar id="header" >
+	<h2 class="title" style="font-family:'黑体'; margin:0 0.2rem;left:0.32rem;text-align: center;line-height: 0.45rem;">用户注册</h2>
+	<i style="position: relative;z-index: 100;" class="icon ion-chevron-left headericon" onclick="javascript:window.history.back();"></i>
+
+	</ion-header-bar>
+
+
+	<ion-content class="content" has-bouncing="false">
+
+		<div class="label1">
+			<input id="code_char" ng-model="hh.txt1" ng-focus="showi1()" ng-value="newtxt" ng-change="hidei1(hh.txt1)" type="text" placeholder="请输入验证码" name="" class="ng-pristine ng-untouched ng-valid ng-empty" style="">
+			<!-- ngIf: showicon1 -->
+			<p><img ng-click="change_checknum()" src="checknum/code_char.php"></p>
+		</div>
+		
+		<div style="overflow: hidden;">
+			<div class="label2">
+				<input style="margin-left: 0 !important;"  ng-model='hh.txt2' type="text" ng-focus="showi2()" ng-change="hidei2(hh.txt2)" placeholder="请输入邮箱" name="user">
+				<i ng-click="clear2()" ng-if="showicon2"></i>
+			</div>
+			<button ng-click="get_email_checknum()" ng-disabled="emailbtn_isnotok"   class="button get_checknum" ng-bind="emailbtn_txt">获取邮箱验证码</button>
+		</div>
+		<div class="label3">
+			<input ng-model='hh.txt3'   type="text" ng-focus="showi3()" ng-change="hidei3(hh.txt3)" placeholder="请输入邮箱验证码" name="">
+			<i ng-click="clear3()" ng-if="showicon3"></i>
+		</div>
+
+
+		<div class="label4">
+			 <input ng-model='hh.txt4' ng-if="!pw_flag" style="border: 0;" ng-focus="showi4()" ng-change="hidei4(hh.txt4)"      type="password" placeholder="请设置6-20位登录密码" name="pwd"/>
+			    <input ng-model='hh.txt4'   ng-if="pw_flag" style="border: 0;" ng-focus="showi4()" ng-change="hidei4(hh.txt4)"      type="text" placeholder="请设置6-20位登录密码" name="pwd"/>
+			   	
+			    <i ng-click="clear4()" ng-if="showicon4" class="clear"></i>
+				 
+			   	<label ng-click="hidei4(hh.txt4)" class="toggle  toggle-assertive">
+
+			   		<input  type="checkbox"  ng-model='pw_flag' name="">
+			   		
+			   		<div class="track" style="color: white;">
+			   		abc
+				   		<div class="handle"></div>
+					<span style="color: #ccc;line-height: 0.25rem;">---</span>
+				  	</div>
+					
+
+			   	</label>
+		</div>
+
+
+		<button ng-click="startregister()" ng-disabled="btn_isnook" ng-class="{true:'btn_active'}[btn_isnook==false]"  class="button button-block list-inset  btn_zhuce ">注册</button>
+
+
+		<p class="xieyi">注册即视为同意<a href="javascript:;">《衡阳师院快乐购用户注册协议》</a></p>
+
+	</ion-content>
+
+
+</ion-view>
+
+

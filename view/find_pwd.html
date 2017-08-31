@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="css/find_pwd.css"/>
+<ion-view>
+	<ion-header-bar id="header" >
+	<h2 class="title" style="font-family:'黑体'; margin:0 0.2rem;left:0.32rem;text-align: center;line-height: 0.45rem;">找回密码</h2>
+	<i style="position: relative;z-index: 100;" class="icon ion-chevron-left headericon" onclick="javascript:window.history.back();"></i>
+
+	</ion-header-bar>
+	<ion-content class="content" has-bouncing="false">
+		
+		<div style="overflow: hidden;">
+			<div class="label2">
+				<input style="margin: 0 !important;"  ng-model='email_txt' type="text" ng-focus="showi2()" ng-change="hidei2(email_txt)" placeholder="请输入邮箱" name="user">
+				<i ng-click="clear2()" ng-if="showicon2"></i>
+			</div>
+			<button ng-click="get_email_checknum(email_txt)" ng-disabled="emailbtn_isnotok"   class="button get_checknum" ng-bind="emailbtn_txt">获取邮箱验证码</button>
+		</div>
+		<div class="label3">
+			<input style="margin-left: 0;" ng-model='hh.txt3'   type="text" ng-focus="showi3()" ng-change="hidei3(hh.txt3)" placeholder="请输入邮箱验证码" name="">
+			<i ng-click="clear3()" ng-if="showicon3"></i>
+		</div>
+		<label>
+		  		<button ng-click="toFind(hh.txt3,email_txt)" class="button button-block list-inset btn-nopadding" style="background:#f23030;color:white;">确认找回</button>
+		</label>
+
+
+
+	</ion-content>
+</ion-view>

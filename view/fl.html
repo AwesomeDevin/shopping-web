@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="css/fl.css"/>
+
+<ion-view class="panebc">
+	<ion-header-bar>
+		<i  style="width: 0.235rem;height: 0.25rem;text-align: center;font-size:0.24rem;" class="icon ion-chevron-left" onclick="javascript:window.history.back()"></i>
+		<input class="search" ng-focus="toSearch()" type="search" />
+		<i ng-click="select_top()" style="width: 0.235rem;height: 0.25rem;" class="icon ion-ios-paper-outline" ></i>
+	</ion-header-bar>
+	
+
+	<ion-content ng-class="{true:'move'}[selectshow==true]" class="leftbc" overflow-scroll="false" delegate-handle="left">
+		<ul>
+			<li ng-class="{true:'active'}[list.type_id==currentid]" ng-click="tabchange($index,list.type_id)" ng-repeat="list in lists">{{list.type_name}}</li>
+			
+		</ul>
+	</ion-content>
+	
+	<!-- <div style="height: 100%; position: absolute; overflow: hidden;"> -->
+		<ion-scroll paging="none" scrollbar-y="false" ng-class="{true:'move'}[selectshow==true]" class="rightbc" style="top: 0.44rem;height: 5.24rem;" delegate-handle="right">
+		<div  class="right_content">
+			<img class="header" ng-src="{{header_url}}"/>
+
+			<article ng-repeat="detail in details">
+				<h5>{{detail.ts_name}}</h5>
+				<section >
+					
+					<ul class="right-content" ng-repeat="shop in detail.list">
+					
+						<li>
+						<a href="#/detail">
+							<img ng-src="{{shop.ti_img}}"/>
+							<p>{{shop.ti_name}}</p>
+						</a>
+						</li>
+					
+					</ul>
+					
+				</section>
+			</article>
+		
+		</div>
+		</ion-scroll>
+	<!-- </div> -->
+	<div id="select" ng-if="selectshow">
+		<a href="#/home"><i></i><span>首页</span></a>
+		<a href="javascript:;"><i></i><span>商品列表</span></a>
+		<a href="#/car"><i></i><span>购物车</span></a>
+		<a href="#/user"><i></i><span>我的京东</span></a>
+	</div>
+
+	
+</ion-view>
+

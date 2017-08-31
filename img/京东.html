@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://localhost/firstweb/jingdongweb/index.html#/detail -->
+<html lang="en" style="font-size: 100px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	
+	<meta http-equiv="Pragma" contect="no-cache">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>京东</title>
+	<link rel="stylesheet" type="text/css" href="./京东_files/common.css">
+	
+	<link rel="stylesheet" type="text/css" href="./京东_files/ionic.min.css">
+	<link rel="stylesheet" type="text/css" href="./京东_files/home.css">
+	<link rel="stylesheet" type="text/css" href="./京东_files/swiper-3.4.0.min.css">
+</head>
+<body ng-app="myapp" style="" class="grade-a platform-browser platform-ios platform-ios9 platform-ios9_1 platform-ready">
+	
+	
+	<ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe="">
+	<ion-view class="pane" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+	
+	
+	<ion-nav-view name="main" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><div class="pane" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><link rel="stylesheet" type="text/css" href="./京东_files/detail.css">
+<ion-view style="background:#ccc;" class="pane">
+
+
+	<ion-header-bar class="bar bar-header">
+		<i style="width: 0.235rem;height: 0.25rem;text-align: center;font-size:0.24rem;" class="icon ion-chevron-left" onclick="javascript:window.location.href=&#39;#/home&#39;"></i>
+		<p class="detail_tab">
+
+		<a class="a_toshop active" ng-click="to_shophome()" ng-class="{&#39;active&#39;:contentbox_movenum1}" href="javascript:;" style="">商品</a>
+		<a class="a_todetail" ng-click="to_shopdetail()" ng-class="{&#39;active&#39;:contentbox_movenum2}" href="javascript:;">详情</a>
+		<a class="a_tocomment" ng-click="to_shopcomment()" ng-class="{&#39;active&#39;:contentbox_movenum3}" href="javascript:;">评价</a>
+
+		</p>
+		<i ng-click="select_top()" style="width: 0.235rem;height: 0.25rem;" class="icon ion-ios-paper-outline"></i>
+	</ion-header-bar>
+	<!-- ngIf: selectshow -->
+	
+	<ion-content class="detail_content scroll-content ionic-scroll has-header shophome" has-bouncing="false" ng-class="{&#39;shophome&#39;:contentbox_movenum1,&#39;shopdetail&#39;:contentbox_movenum2,&#39;shopcomment&#39;:contentbox_movenum3,&#39;go_list&#39;:selectshow}" "="" style=""><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+		<div id="detail_left" class="detail_left" style="width: 3.2rem; overflow: hidden; float: left; height: 931px;">
+			<div class="slider" style="margin-bottom: 1px; visibility: visible;"><div class="slider-slides" ng-transclude="" style="width: 960px;">
+			  <ion-slide class="slider-slide" data-index="0" style="width: 320px; left: 0px; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+			    <div class="box"><img class="shop" src="./京东_files/57ecf5c6Nbc61da1c.jpg!q70.jpg" onerror="javascript:this.src=&#39;img/220936.gif&#39;" alt="加载中..."></div>
+			  </ion-slide>
+			  <ion-slide class="slider-slide" data-index="1" style="width: 320px; left: -320px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px);">
+			    <div class="box"><img class="shop" src="./京东_files/57ecf5c7N24927e7a.jpg!q70.jpg" onerror="javascript:this.src=&#39;img/220936.gif&#39;" alt="加载中..."></div>
+			  </ion-slide>
+			  <ion-slide on-slide-changed="slideHasChanged(index)" class="slider-slide" data-index="2" style="width: 320px; left: -640px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px);">
+			    <div class="box"><img class="shop" src="./京东_files/57f856f9N9402fe4e.jpg!q70.jpg" onerror="javascript:this.src=&#39;img/220936.gif&#39;" alt="加载中..."></div>
+			  </ion-slide>
+			  
+			</div><div class="slider-pager"><!-- ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page active" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --><span class="slider-pager-page" ng-repeat="slide in numSlides() track by $index" ng-class="{active: $index == currentSlide}" ng-click="pagerClick($index)"><i class="icon ion-record"></i></span><!-- end ngRepeat: slide in numSlides() track by $index --></div></div>
+			<div class="jiesao">
+				<h4 ng-model="shops_title" class="ng-pristine ng-untouched ng-valid ng-empty" style="">联想(leveno) YOGA3-14 14英寸触控轻薄本</h4>
+				<p>笔记本电脑酷睿 i5-5200U 橙色 i5-5200 4G 500+8G固态 2G独显</p>  
+				<b ng-model="shops_price" class="ng-pristine ng-untouched ng-valid ng-empty">￥<span>5199.0</span></b>
+				<p class="tuijian">推荐：触控时尚轻薄本 下单即送YOGA专用包</p>	
+			</div>
+	    	<!-- 商品类型 -->
+	    	
+			<div class="goods_type">
+				
+					<div class="box_left"><span>已选</span></div>
+					<div class="box_right">
+						<p>i5-5200U 4G 256G固态硬盘 橙色 高清触摸屏<span>1件</span></p>
+						<p><span>可选延保</span></p>
+					</div>
+				
+			</div>
+
+			<!-- 买家地址 -->
+			<div class="goods_address">
+				<div class="box1">
+					<div class="box1_left left"><span>送至</span></div>
+					<div class="box1_right right">
+						<p style="margin:0;margin-right: 0.2rem;float:left;">辽宁 丹东市 东港市 城区</p>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="box2_left left"><span>运费</span></div>
+					<div class="box2_right right">
+						<p>免运费</p>
+					</div>
+				</div>
+				<div class="box3">
+					<div class="box3_left left"><span>服务</span></div>
+					<div class="box3_right right">
+						<p>由联想众信合一专卖店从北京发货并提供售后服务</p>
+					</div>
+				</div>
+				<div class="box4">
+					<div class="box4_left left"><span>提示</span></div>
+					<div class="box4_right right">
+						<p style="color: #6277ac;">支持7天无理由退货</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 商品店铺 -->
+			<div class="good_shop">
+				<div class="shop_floor floor_1">
+					<img src="./京东_files/shop_logo.jpg">
+					<div class="txt">
+						<h5>联想育新专卖店<span>9.5</span></h5>
+						<p>联想笔记本 游戏本 超薄本 授权专卖店</p>
+					</div>
+				</div>
+				<div class="shop_floor floor_2">
+					<p>商品<span>9.6</span></p>
+					<p>服务<span>9.5</span></p>
+					<p>物流<span>9.6</span></p>
+
+				</div>
+				<div class="shop_floor floor_3">
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>598</p>
+							<p>关注人数</p>
+						</div>
+					</div>
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>154</p>
+							<p>全部商品</p>
+						</div>
+					</div>
+					<div class="bigbox">
+						<div class="smallbox">
+							<p>7</p>
+							<p>店铺动态</p>
+						</div>
+					</div>
+				</div>
+				<div class="shop_floor floor_4">
+					<div class="connection_sell">
+						<p>
+							联系卖家
+						</p>
+					</div>
+					<div class="go_shop">
+						<p>
+							进入店铺
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			
+		</div>
+
+
+		<div class="detail_center" style="width: 3.2rem; overflow: hidden; float: left; height: 931px; background: white;">
+			<ul>
+				<li ng-class="{&#39;active&#39;:introshow1}" ng-click="show_introduce1()" class="active" style="">商品介绍</li>
+				<li ng-class="{&#39;active&#39;:introshow2}" ng-click="show_introduce2()">规格参数</li>
+				<li ng-class="{&#39;active&#39;:introshow3}" ng-click="show_introduce3()">包装售后</li>
+			</ul>
+
+			<!-- ngIf: introshow1 --><div class="shop_introduce1" ng-if="introshow1">
+				<img src="./京东_files/intro1.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro2.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro3.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro4.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro5.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro6.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro7.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro8.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro9.jpg" alt="正在加载中...">
+				<img src="./京东_files/intro10.jpg" alt="正在加载中...">
+			</div><!-- end ngIf: introshow1 -->
+
+			<!-- ngIf: introshow2 -->
+
+			<!-- ngIf: introshow3 -->
+		</div>
+
+		<div class="detail_right" style="width: 3.2rem; overflow: hidden; float: left; height: 931px; background: white;">
+			<ul>
+				<li ng-click="tocomment1()" ng-class="{true:&#39;active&#39;}[comment_hover==1]" class="active" style="">
+					<p>全部评价</p>
+					<p class="num1">0</p>
+				</li>
+				<li ng-click="tocomment2()" ng-class="{true:&#39;active&#39;}[comment_hover==2]">
+					<p>好评</p>
+					<p class="num2">0</p>
+				</li>
+				<li ng-click="tocomment3()" ng-class="{true:&#39;active&#39;}[comment_hover==3]">
+					<p>中评</p>
+					<p class="num3">0</p>
+				</li>
+				<li ng-click="tocomment4()" ng-class="{true:&#39;active&#39;}[comment_hover==4]">
+					<p>差评</p>
+					<p class="num4">0</p>
+				</li>
+				<li ng-click="tocomment5()" ng-class="{true:&#39;active&#39;}[comment_hover==5]">
+					<p>有图</p>
+					<p class="num5">0</p>
+				</li>
+
+			</ul>
+		</div>
+			
+		<div style="height:0.5rem;width:100%;float:left;"></div>
+		
+	</div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 108px;"></div></div></ion-content>
+	<div class="menu_list">
+		<div class="left_menu">
+			<a href="javascript:;">卖家</a>
+			<a href="javascript:;">关注</a>
+			<a href="javascript:;">购物车</a>
+		</div>
+
+		<div class="right_menu">
+			<a ng-click="add_shopcar()" href="javascript:;">加入购物车</a>
+			<a href="javascript:;">立即购买</a>
+		</div>
+			
+	</div>
+
+
+
+	<!-- 选择购买商品类型 -->
+	<div class="mask_shopstype">
+		<div class="mask"></div>
+		<div class="mask_content">
+			<div class="content_top">
+				<img src="./京东_files/type1.jpg">
+			</div>
+			<div class="content_middle"></div>
+			<div class="content_bottom"></div>
+
+		</div>	
+	</div>
+
+
+
+
+
+
+
+
+	
+
+
+</ion-view></div></ion-nav-view>
+
+	
+
+</ion-view></ion-nav-view>
+	
+
+
+	<script type="text/javascript" src="./京东_files/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./京东_files/jquery.idcode.js"></script>
+	<script type="text/javascript" src="./京东_files/ionic.bundle.min.js"></script>
+	<script type="text/javascript" src="./京东_files/zepto.js"></script>
+	<script type="text/javascript" src="./京东_files/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="./京东_files/iscroll.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
+	<script type="text/javascript">
+
+
+
+	
+	
+	var app=angular.module("myapp",['ionic','myController','myController1','myController2']);
+	app.config(['$stateProvider','$urlRouterProvider','$httpProvider',function($stateProvider,$urlRouterProvider,$httpProvider){
+		$httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
+		$stateProvider
+		.state('main',{
+			abstract:true,
+			templateUrl:'view/main.html',
+			
+			
+		})
+		.state('main.home',{
+
+
+			url:'/home',
+			views:{
+				'main':{
+					templateUrl:'view/home.html',
+					controller:'homeCtrl'
+				}
+			}
+		}).state('main.fl',{
+			url:"/fl",
+			views:{
+				'main':{
+					templateUrl:'view/fl.html',
+					controller:'flCtrl'
+				}
+			}
+		}).state('main.login',{
+			url:"/login",
+			views:{
+				'main':{
+					templateUrl:'view/login.html',
+					controller:'loginCtrl'
+				}
+			}
+		}).state('main.search',{
+			url:"/search",
+			views:{
+				'main':{
+					templateUrl:'view/search.html',
+				}
+			}
+		}).state('main.register',{
+			url:'/register',
+			views:{
+				'main':{
+					templateUrl:'view/register.html',
+					controller:'registerCtrl'
+				}
+			}
+		}).state('main.detail',{
+			url:'/detail',
+			views:{
+				'main':{
+					templateUrl:'view/detail.html',
+					controller:'detailCtrl'
+				}
+			}
+		}).state('main.car',{
+			url:'/car',
+			views:{
+				'main':{
+					templateUrl:'view/car.html'
+					// controller:'carCtrl'
+				}
+			}
+		})
+
+		$urlRouterProvider.otherwise("/home");
+	}])
+
+
+
+
+
+
+		function resize() {
+			var clientwidth=document.documentElement.clientWidth;
+			document.documentElement.style.fontSize=100*(clientwidth/320)+'px';
+			
+		}
+		resize();
+		window.addEventListener('resize',resize);
+
+
+		// angular.module("myapp",['ionic']).controller('dvctrl',["$scope",function($scope){}]);
+	</script>
+	
+	
+	<script type="text/javascript" src="./京东_files/move.js"></script>
+	<script type="text/javascript" src="./京东_files/home.js"></script>
+	<script type="text/javascript" src="./京东_files/list.js"></script>
+	<script type="text/javascript" src="./京东_files/detail.js"></script>
+
+</body></html>
