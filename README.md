@@ -1,11 +1,11 @@
 # shopping-web
 该项目是一个综合购物平台,JSONP跨域实现局部刷新商品数据,实现了用户登录、注册、修改头像，发送邮件等功能，前端使用的是angular+ionic,后端架构使用的是tornado+mysql  效果图:  
   	` 首页:`  
-  	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/510887530c25406faba93d10cc0a1c88.jpg)
+  	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/510887530c25406faba93d10cc0a1c88.jpg)	  
 	`用户登录:`
-  	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/7e2b646a31104c39a6878386dffea3b7.jpg)
+  	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/7e2b646a31104c39a6878386dffea3b7.jpg)    
 	`用户注册:`
-	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/e878e7c9ede540648c66d771866a4a47.jpg)
+	![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/e878e7c9ede540648c66d771866a4a47.jpg)		
 	`收到邮件:`
 ![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/aed53f68aba84c2782779c841ee4c0fd.jpg)
 	`注册成功:`
