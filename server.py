@@ -25,12 +25,12 @@ class MainHandler(tornado.web.RequestHandler):
         print email
         if email:
             config={
-            "from":"daivonup@163.com",
+            "from":"1641260752@qq.com",
             "to": email,             # 收件人邮箱
-            "serverip": "smtp.163.com",             # 发件服务器IP
-            "serverport":"25",                      # 发件服务器Port
-            "username": "daivonup@163.com",        # 发件人用户名
-            "pwd": "dw15074707396"
+            "serverip": "smtp.qq.com",             # 发件服务器IP
+            "serverport":"465",                      # 发件服务器Port
+            "username": "1641260752@qq.com",        # 发件人用户名
+            "pwd": "myryectzcjplcefh"
             }
             title = "衡阳师院快乐购【验证码】"
             
@@ -61,15 +61,17 @@ def sendMailText(title, content, sender, receiver, serverip, serverport, usernam
     
     msg = MIMEText(content, _subtype="html", _charset="utf-8")    # 设置正文为符合邮件格式的HTML内容(plain为文本格式,html为html格式)
     msg['Subject'] = Header(title, "utf-8")     # 设置邮件标题
-    msg['From'] = formatAddr('衡阳师院快乐购 <%s>' % sender).encode()                        # 设置发件人
+    msg['From'] = sender                        # 设置发件人
     msg['To'] = receiver                        # 设置收件人
+    # msg['CC'] = receiver                        # 设置收件人
+
     
-    s = smtplib.SMTP(serverip, serverport)      # 注意！如果是使用SSL端口，这里就要改为SMTP_SSL
+    s = smtplib.SMTP_SSL(serverip, serverport)      # 注意！如果是使用SSL端口，这里就要改为SMTP_SSL
     #s.ehlo()
     #s.starttls()
     s.login(username, pwd)     
-    print '123'                 # 登陆邮箱
-    s.sendmail(sender, receiver, msg.as_string())  # 发送邮件
+    print 'sender',sender                 # 登陆邮箱
+    s.sendmail(sender,receiver, msg.as_string())  # 发送邮件
 
 
 
