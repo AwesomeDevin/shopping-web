@@ -3,7 +3,7 @@
 	效果图:
 	首页:
 ![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/510887530c25406faba93d10cc0a1c88.jpg)
-	用户登录:
+	用户登录:</br>
 ![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/7e2b646a31104c39a6878386dffea3b7.jpg)
 	用户注册:
 ![](https://raw.githubusercontent.com/wd13925/shopping-web/master/screenshots/e878e7c9ede540648c66d771866a4a47.jpg)
