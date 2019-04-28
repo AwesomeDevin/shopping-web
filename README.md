@@ -1,4 +1,4 @@
-[welcome to my blog,AwesomeDevin's blog,trying to be a fullstack developer and sticking it ！！！](https://github.com/AwesomeDevin/blog)
+[技术博客 - welcome to my blog,AwesomeDevin's blog,trying to be a fullstack developer and sticking it ！！！]
 # shopping-web
 该项目是一个综合购物平台,JSONP跨域实现局部刷新商品数据,实现了用户登录、注册、修改头像，发送邮件等功能，前端使用的是angular+ionic,后端架构使用的是tornado+mysql  效果图:  
 
